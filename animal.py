@@ -1,4 +1,5 @@
 from island import Island
+import random
 
 class Animal():
     NOT_FOUND = 0
@@ -27,6 +28,7 @@ class Animal():
         neighbor location that presently has an object of the specified type. 
         Returns NOT_FOUND if no such location exists'''
         offset = [(-1,1), (0,1), (1,1), (-1,0), (1,0), (-1,-1), (0,-1), (1,-1)]
+        random.shuffle(offset)
         result = Animal.NOT_FOUND
 
         for dx, dy in offset:
