@@ -42,8 +42,6 @@ def main(predator_breed_time=6, predator_starve_time=3, initial_predators=10, pr
                 if isinstance(animal, Animal):
                     if isinstance(animal, Predator): # a predator can eat
                         animal.eat()
-                    if isinstance(animal, Prey):  # a prey can breed twice
-                        animal.breed()
                     animal.move()
                     animal.breed()
                     animal.clock_tick()
